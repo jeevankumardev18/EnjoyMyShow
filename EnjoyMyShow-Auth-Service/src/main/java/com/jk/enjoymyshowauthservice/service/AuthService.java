@@ -26,7 +26,7 @@ public class AuthService
     {
         if(repo.existsByEmail(requestDto.getEmail()))
         {
-            throw  new RuntimeException("User already exists");
+            throw new RuntimeException("An account already exists with this email. Please log in.");
         }
 
         UserCredential user=  UserCredential.builder()
